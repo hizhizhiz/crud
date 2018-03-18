@@ -17,18 +17,18 @@ if (isset($_POST['Submit']))
     {
         if (empty($_POST['name']))
         {
-            echo 'Name field is empty.<br>';
+            echo "<div class='container'><span>Name field is empty.</span></div>";
         }
         if (empty($_POST['age']))
         {
-            echo 'Age field is empty.<br>';
+            echo "<div class='container'><span>Age field is empty.</span></div>";
         }
         if (empty($_POST['email']))
         {
-            echo 'Email field is empty<br>';
+            echo "<div class='container'><span>Email field is empty.</span></div>";
         }
 
-        echo "<a href='javascript: history.back()'>Back</a>";
+        echo "<a class='btn btn-primary btn-sm' href='javascript: history.back()'>Back</a>";
     } else
     {
         try {

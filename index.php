@@ -14,19 +14,23 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Home Page</title>
 </head>
 <body>
-<div style="width: 60%; margin: 0 auto;">
-    <a href="add.html">Add New Data</a>
+<div class="container">
+    <br>
+    <a class="btn btn-outline-primary btn-lg" href="add.html">Add New Data</a>
 
-    <table width="80%" border="0">
-        <tr bgcolor="#ccc">
-            <td>Name</td>
-            <td>Age</td>
-            <td>Email</td>
-            <td>Update</td>
-        </tr>
+    <table class="table">
+        <thead>
+            <tr class="bg-primary">
+                <th scope="col"><p class="h3">Name</p></th>
+                <th scope="col"><p class="h3">Age</p></th>
+                <th scope="col"><p class="h3">Email</p></th>
+                <th scope="col"><p class="h3">Update</p></th>
+            </tr>
+        </thead>
         <?php
             require_once 'config.php';
 
@@ -37,8 +41,8 @@
                 echo "<td>" . $row['name'] . "</td>";
                 echo "<td>" . $row['age'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
-                echo "<td><a href=\"edit.php?id=$row[id]\">Edit</a> 
-                        | <a href=\"delete.php?id=$row[id]\" onclick=\"return confirm('Are you sure want to delete?')\">Delete</a></td>";
+                echo "<td><a class='btn btn-warning btn-sm' href=\"edit.php?id=$row[id]\">Edit</a> 
+                        | <a class='btn btn-danger btn-sm' href=\"delete.php?id=$row[id]\" onclick=\"return confirm('Are you sure want to delete?')\">Delete</a></td>";
             }
 
         ?>
