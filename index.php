@@ -24,7 +24,7 @@
 
     <table class="table">
         <thead>
-            <tr class="bg-primary">
+            <tr class="bg-primary" style="color: white;">
                 <th scope="col"><p class="h3">Name</p></th>
                 <th scope="col"><p class="h3">Age</p></th>
                 <th scope="col"><p class="h3">Email</p></th>
